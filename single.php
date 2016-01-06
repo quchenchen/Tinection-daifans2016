@@ -57,7 +57,7 @@
 		<?php }?>
 		<!-- /.Top ad -->
 		<div class="single-thumb">
-			<?php if(has_post_thumbnail()&&ot_get_option('show-single-thumb')=='on'){ 
+			<?php if(has_post_thumbnail()&&ot_get_option('show-single-thumb')=='on'){
 				$url = get_post_meta( $post->ID, 'tin_thumb_url', true );
 				$url = explode('|',$url);
 				$link = isset($url[0]) ? $url[0]:'';
@@ -96,12 +96,9 @@
 			<?php get_template_part('includes/bdshare'); ?>
 		</div>
 		<!-- /.Single Activity -->
-		<!-- Single Author Info -->
-		<?php get_template_part('includes/author-info'); ?>
-		<!-- /.Single Author Info -->
 		<!-- Related Articles -->
-		<?php get_template_part('includes/related'); ?>		
-		<!-- /.Related Articles -->				
+		<?php get_template_part('includes/related'); ?>
+		<!-- /.Related Articles -->
 		<!-- Prev or Next Article -->
 		<div class="navigation">
 			<div class="navigation-left">
@@ -114,7 +111,7 @@
 			</div>
 		</div>
 		<!-- /.Prev or Next Article -->
-		
+
 		<!-- Comments ad1 -->
 		<?php if(!tin_is_mobile()){ ?>
 			<div id="cmnt-banner1" class="banner">
@@ -128,7 +125,7 @@
 		<!-- /.Comments ad1 -->
 
 		</div>
-		<!-- /.Content -->		
+		<!-- /.Content -->
 		<!-- Comments -->
 		<?php if (comments_open()) comments_template( '', true ); ?>
 		<!-- /.Comments -->
